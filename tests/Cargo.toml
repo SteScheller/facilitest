@@ -5,9 +5,8 @@ authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
 edition = "2021"
 publish = false
 
-[[bin]]
-name = "facilitest-tests"
-path = "main.rs"
+[lib]
+path = "lib.rs"
 
 [dependencies]
 facilitest = { path="../" }

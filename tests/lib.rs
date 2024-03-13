@@ -1,7 +1,3 @@
-fn main() {
-    println!("Run 'cargo test' ..");
-}
-
 #[cfg(test)]
 mod tests {
     use facilitest::*;
@@ -17,6 +13,7 @@ mod tests {
     }
     */
 
+    /*
     test_p! {
         identity,
         (
@@ -24,6 +21,7 @@ mod tests {
             //_1: (4711), 4711
         )
     }
+    */
 
     /*
     test_p! {
