@@ -14,20 +14,13 @@ macro_rules! test_suite {
 }
 
 #[macro_export]
-macro_rules! call {
-    ($func:ident, ($($arg:expr),*)) => {
-        $func($($arg,)*)
-    }
-}
-
-#[macro_export]
 macro_rules! test_p {
-    ($func:ident, ($($suffix:ident: $args:tt, $expected:expr)*)) => {
+    ($func:ident, ($($suffix:ident: ($($arg:expr),*), $expected:expr)*)) => {
     $(
         $crate::paste! {
             #[test]
             fn [<test_$func$suffix>]() {
-                assert_eq!($crate::call!($func, $args), $expected);
+                assert_eq!($func($($arg,)*), $expected);
             }
         }
     )*
