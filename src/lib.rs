@@ -1,5 +1,9 @@
-pub use paste::paste;
+//pub use paste::paste;
 
+pub use facilitest_macros::cat_ident;
+
+
+/*
 #[macro_export]
 macro_rules! test_suite {
     ($($name:ident: $value:expr,)*) => {
@@ -12,36 +16,19 @@ macro_rules! test_suite {
     )*
     }
 }
+*/
+
 
 #[macro_export]
 macro_rules! test_p {
     ($func:ident, ($($suffix:ident: ($($arg:expr),*), $expected:expr)*)) => {
     $(
-        $crate::paste! {
-            #[test]
-            fn [<test_$func$suffix>]() {
-                assert_eq!($func($($arg,)*), $expected);
-            }
+        //#[test]
+        fn cat_ident!(test_, $func, $suffix)() {
+        //fn func() {
+            //cat_ident!(test_, $func, $suffix)();
+            assert_eq!($func($($arg,)*), $expected);
         }
     )*
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use std::convert::identity;
-
-    test_suite! {
-        foo: (identity, 42, 42),
-        bar: (identity, 0xC0FFEE, 0xC0FFEE),
-    }
-
-    test_p! {
-        identity,
-        (
-            _0: ("D'oh!"), "D'oh!"
-            _1: (4711), 4711
-        )
     }
 }

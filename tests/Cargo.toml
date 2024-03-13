@@ -1,0 +1,14 @@
+[package]
+name = "facilitest-tests"
+version = "0.0.0"
+authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "facilitest-tests"
+path = "main.rs"
+
+[dependencies]
+facilitest = { path="../" }
+facilitest-macros = { path="../src/macros" }

@@ -1,0 +1,10 @@
+[package]
+name = "facilitest-macros"
+version = "0.0.0"
+authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
+edition = "2021"
+publish = false
+
+[lib]
+path = "lib.rs"
+proc-macro = true
