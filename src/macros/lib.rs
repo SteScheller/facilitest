@@ -49,7 +49,6 @@ pub fn make_test_fn(input: TokenStream) -> TokenStream {
     ))));
 
     // append function name
-    println!("{}", suffix);
     let ts_name = TokenStream::from_iter([
         TokenTree::from(Ident::new("test_", Span::call_site())),
         func.clone(),

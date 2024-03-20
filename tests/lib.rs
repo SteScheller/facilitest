@@ -1,10 +1,8 @@
 #[cfg(test)]
 mod tests {
     use facilitest::*;
-    use facilitest_macros::*;
 
     use std::convert::identity;
-    //use std::cmp::max;
 
     /*
     test_suite! {
