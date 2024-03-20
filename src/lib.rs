@@ -1,7 +1,6 @@
 //pub use paste::paste;
 
-pub use facilitest_macros::cat_ident;
-
+use facilitest_macros::{build_ident, make_test_fn};
 
 /*
 #[macro_export]
@@ -18,17 +17,11 @@ macro_rules! test_suite {
 }
 */
 
-
 #[macro_export]
 macro_rules! test_p {
-    ($func:ident, ($($suffix:ident: ($($arg:expr),*), $expected:expr)*)) => {
+    ($func:path, ($($suffix:ident: ($($arg:expr),*), $expected:expr)*)) => {
     $(
-        //#[test]
-        fn cat_ident!(test_, $func, $suffix)() {
-        //fn func() {
-            //cat_ident!(test_, $func, $suffix)();
-            assert_eq!($func($($arg,)*), $expected);
-        }
+        make_test_fn!($func, $suffix, ($($arg,)*), $expected);
     )*
     }
 }
