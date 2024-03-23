@@ -1,7 +1,8 @@
 [package]
 name = "facilitest"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
+repository = "https://github.com/SteScheller/facilitest"
 edition = "2021"
 description = "Utilities that facilitate testing"
 license = "MIT"
