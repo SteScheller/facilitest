@@ -10,7 +10,4 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-facilitest-macros = { version="0", path = "src/macros" }
-
-[dev-dependencies]
-facilitest-tests = { version="0", path = "tests" }
+facilitest-macros = { version="0.1.0", path = "src/macros" }
