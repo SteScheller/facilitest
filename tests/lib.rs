@@ -4,13 +4,6 @@ mod tests {
 
     use std::convert::identity;
 
-    /*
-    test_suite! {
-        foo: (identity, 42, 42),
-        bar: (identity, 0xC0FFEE, 0xC0FFEE),
-    }
-    */
-
     test_p! {
         identity,
         (
