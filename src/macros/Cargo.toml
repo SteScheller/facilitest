@@ -1,6 +1,6 @@
 [package]
 name = "facilitest-macros"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
 edition = "2021"
 description = "internal dependency of 'facilitest' package"
