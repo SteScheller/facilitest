@@ -1,9 +1,10 @@
 [package]
 name = "facilitest-macros"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Stefan Scheller <ste.scheller@gmail.com>"]
 edition = "2021"
-publish = false
+description = "internal dependency of 'facilitest' package"
+license = "MIT"
 
 [lib]
 path = "lib.rs"
